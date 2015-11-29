@@ -1,0 +1,12 @@
+login_link:
+  type:xpath
+  value:".//*[@id='ttbar-login']/a[@class="link-login"]"
+手机数码京东通信:
+  type:xpaths
+  value:"%s%s"
+baidu_input1:
+  type:id
+  value:kw
+baidu_button1:
+  type:xpath
+  value:"//div[@id='%productId%']//div"

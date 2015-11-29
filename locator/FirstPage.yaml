@@ -1,0 +1,9 @@
+login_link:
+  type:xpath
+  value:".//*[@id='ttbar-login']//a[@class='link-login']"
+sjsmjdtx:
+  type:xpath
+  value:"//div[@id='categorys-2014']//div[@class='dd-inner']//a[@href='http://shouji.jd.com/']"
+sjplrk:
+  type:xpath
+  value:"//div[@id='categorys-2014']//a[@href='http://list.jd.com/list.html?cat=9987,653,655']"

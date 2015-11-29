@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <common>
+        <inputValue>baidu_input</inputValue>
+    </common>
+    <testLogin>
+        <username>test1</username>
+    	<password>123456</password>
+    </testLogin>
+    <testLogin>
+        <username>test2</username>
+    	<password>123456</password>
+    </testLogin>
+    <testLogout>
+        <key>aabbcc</key>
+    </testLogout>
+</data>
