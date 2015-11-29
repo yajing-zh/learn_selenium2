@@ -19,6 +19,7 @@ public class Login extends TestBase {
 		Assertion.flag = true;
 		this.goTo(param.get("url"));
 		Thread.sleep(5);
+
 		// ((JavascriptExecutor) this.driver).executeScript("login();");
 		FirstPage fp = new FirstPage(driver);
 		Log.logInfo("在首页点击登录按钮");
