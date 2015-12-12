@@ -93,8 +93,9 @@ public class TestBase {
 	// }
 	// }
 
-	public void goTo(String url) {
+	public void goTo(String url) throws InterruptedException {
 		driver.get(url);
+		Thread.sleep(15);
 		if (Config.Browser.equals("firefox")) {
 			// Util.sleep(1);
 		}

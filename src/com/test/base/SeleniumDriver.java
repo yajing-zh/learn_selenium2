@@ -3,7 +3,9 @@ package com.test.base;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.test.bean.Config;
 
@@ -21,24 +23,17 @@ public class SeleniumDriver {
 
 	private WebDriver initDriver() {
 		if ("firefox".equals(Config.Browser)) {
-			// File file = new File("files/firebug-2.0.7-fx.xpi");
-			// FirefoxProfile profile = new FirefoxProfile();
-			// try {
-			// profile.addExtension(file);
-			// } catch (IOException e) {
-			// e.printStackTrace();
-			// }
-			// profile.setPreference("extensions.firebug.currentVersion",
-			// "2.0.7");
-			// // active firebug extensions
-			// profile.setPreference("extensions.firebug.allPagesActivation",
-			// "on");
-			// driver = new FirefoxDriver(profile);
 			driver = new FirefoxDriver();
 		} else if ("ie".equals(Config.Browser)) {
-
+			System.setProperty("webdriver.ie.driver",
+					"files/IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
 		} else if ("chrome".equals(Config.Browser)) {
-
+			System.setProperty("webdriver.chrome.driver",
+					"files/chromedriver.exe");
+			driver = new ChromeDriver();
+			// Navigation navigation = driver.navigate();
+			// navigation.to("https://www.baidu.com");
 		} else {
 			System.out.println("浏览器匹配值错误" + Config.Browser);
 		}
